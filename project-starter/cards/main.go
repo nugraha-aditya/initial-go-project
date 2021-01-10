@@ -7,14 +7,12 @@ func main() {
 	card := createNewCard()
 	fmt.Println(card)
 
-	cards := []string{"Five of Spade", createNewCard()}
+	cards := deck{"Ace of Spades", createNewCard()}
 	cards = append(cards, "Jack of Diamond")
 	fmt.Println(cards)
 	fmt.Println(len(cards))
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	cards.print()
 }
 
 func createNewCard() string {
